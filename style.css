@@ -1,0 +1,95 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+header, nav, main, footer {
+  padding: 1rem;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Flexbox navigation */
+nav {
+  background: #f4f4f4;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem;
+}
+
+/* Grid layout for main content */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content {
+  background: #e3f2fd;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #ffe0b2;
+  padding: 1rem;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .content, .sidebar {
+    padding: 0.5rem;
+  }
+
+  nav {
+    font-size: 0.9rem;
+  }
+}
